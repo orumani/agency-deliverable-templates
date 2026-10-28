@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Gallery: Agency Deliverable Engine</title>
+    <link rel="stylesheet" href="../styles/deliverable.css">
+    <style>
+        :root {
+            --accent: var(--color-engineering);
+            --accent-bg: var(--color-engineering-bg);
+        }
+        .swatch-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.75rem 0; }
+        .swatch { padding: 6px 12px; border-radius: 100px; font-size: 12px; font-weight: 700; }
+        code { font-size: 0.85em; background: var(--color-border-light); padding: 1px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span class="header-badge">Engineering</span>
+        <h1>Component Gallery</h1>
+        <p>Every component in deliverable.css, with the class names to use.</p>
+        <div class="report-meta">
+            <span>Agency Deliverable Engine</span>
+            <span>Version 1.0.0</span>
+            <span>Reference sheet</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Executive Summary</h2>
+    <div class="exec-summary">
+        <h3>How to Use This Page</h3>
+        <ul>
+            <li>Open it in a browser next to your editor and copy the markup you need.</li>
+            <li>Each document sets only its accent color; every component below inherits it.</li>
+            <li>Class names are listed under each example in <code>code</code> style.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Category Accents</h2>
+        <p class="section-text">Set <code>--accent</code> and <code>--accent-bg</code> in the document's <code>:root</code> block to one of these pairs. The header badge text must match the category.</p>
+        <div class="swatch-row">
+            <span class="swatch" style="background: var(--color-strategy-bg); color: var(--color-strategy);">Strategy</span>
+            <span class="swatch" style="background: var(--color-creative-bg); color: var(--color-creative);">Creative</span>
+            <span class="swatch" style="background: var(--color-performance-bg); color: var(--color-performance);">Performance Marketing</span>
+            <span class="swatch" style="background: var(--color-webdev-bg); color: var(--color-webdev);">Web Development</span>
+            <span class="swatch" style="background: var(--color-ai-bg); color: var(--color-ai);">AI Solutions</span>
+            <span class="swatch" style="background: var(--color-sales-bg); color: var(--color-sales);">Sales</span>
+            <span class="swatch" style="background: var(--color-operations-bg); color: var(--color-operations);">Operations</span>
+            <span class="swatch" style="background: var(--color-engineering-bg); color: var(--color-engineering);">Engineering</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Metrics</h2>
+        <div class="metrics-grid">
+            <div class="metric-box"><div class="metric-value">12.4k</div><div class="metric-label">Visitors</div><div class="metric-note">+8% month on month</div></div>
+            <div class="metric-box"><div class="metric-value">3.2%</div><div class="metric-label">Conversion Rate</div></div>
+            <div class="metric-box"><div class="metric-value">$48</div><div class="metric-label">Average Order</div></div>
+        </div>
+        <p class="section-text"><code>.metrics-grid</code> &gt; <code>.metric-box</code> with <code>.metric-value</code>, <code>.metric-label</code>, optional <code>.metric-note</code>.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Callouts</h2>
+        <div class="insight-block"><strong>Insight block.</strong> An accent-colored note for framing context. <code>.insight-block</code></div>
+        <div class="info-panel"><p>Info panel for context or a quoted summary. <code>.info-panel</code></p></div>
+        <div class="section-intro"><p>Section intro, a green-edged opener for a section. <code>.section-intro</code></p></div>
+        <div class="key-finding"><strong>Key finding</strong>The single result a reader must not miss. <code>.key-finding</code></div>
+        <div class="data-gap"><strong>Data gap</strong>Missing data, caveats and follow-ups. <code>.data-gap</code></div>
+        <div class="tracking-issue"><strong>Critical issue</strong>Something broken that costs the client money. <code>.tracking-issue</code></div>
+        <div class="positioning-statement">A positioning statement or pull quote. <code>.positioning-statement</code></div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Cards</h2>
+        <div class="channel-card">
+            <h3>Channel card <span class="channel-status status-healthy">Healthy</span></h3>
+            <p class="channel-subtitle">Subtitle line for method or scope. <code>.channel-card</code>, <code>.channel-subtitle</code></p>
+            <p class="section-text">Status pills: <span class="channel-status status-healthy">Healthy</span> <span class="channel-status status-needs-work">Needs Work</span> <span class="channel-status status-critical">Critical</span> <span class="channel-status status-unknown">Unknown</span></p>
+        </div>
+        <div class="finding-card">
+            <h4>Finding card</h4>
+            <p>A structured finding with a heading and evidence. <code>.finding-card</code></p>
+        </div>
+        <div class="recommendation-card">
+            <h4>Recommendation card <span class="priority-badge priority-high">High Priority</span> <span class="priority-badge priority-medium">Medium Priority</span> <span class="priority-badge priority-low">Low Priority</span> <span class="timeline-badge">Week 1</span></h4>
+            <p class="section-text">One action per card. <code>.recommendation-card</code>, <code>.priority-badge</code> with <code>.priority-high</code>, <code>.priority-medium</code> or <code>.priority-low</code>, and <code>.timeline-badge</code>.</p>
+        </div>
+        <div class="card-grid card-grid--cols">
+            <div class="card"><div class="card-title">Card</div><div class="card-desc">Small tile in a responsive grid. <code>.card-grid.card-grid--cols</code> &gt; <code>.card</code></div></div>
+            <div class="card"><div class="card-title">Card</div><div class="card-desc">Use for services, deliverables or team members.</div></div>
+        </div>
+        <div class="panel"><h4>Panel</h4><p>A neutral container for grouped information. <code>.panel</code></p></div>
+        <div class="data-box">Data box for a block of plain facts. <code>.data-box</code></div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Comparison Grids</h2>
+        <div class="swot-grid">
+            <div class="swot-box swot-strengths"><h4>Strengths</h4><ul><li>Loyal repeat customers</li></ul></div>
+            <div class="swot-box swot-weaknesses"><h4>Weaknesses</h4><ul><li>No email list</li></ul></div>
+            <div class="swot-box swot-opportunities"><h4>Opportunities</h4><ul><li>Seasonal pre-orders</li></ul></div>
+            <div class="swot-box swot-threats"><h4>Threats</h4><ul><li>New competitor nearby</li></ul></div>
+        </div>
+        <div class="option">
+            <h4>Option card with pros and cons</h4>
+            <div class="pros-cons">
+                <div class="pros"><h4>For</h4><ul><li>Fast to launch</li></ul></div>
+                <div class="cons"><h4>Against</h4><ul><li>Higher monthly cost</li></ul></div>
+            </div>
+        </div>
+        <div class="strength"><strong>Strength</strong>What is working. <code>.strength</code></div>
+        <div class="weakness"><strong>Weakness</strong>What is not. <code>.weakness</code></div>
+        <div class="opportunity"><strong>Opportunity</strong>What to try. <code>.opportunity</code></div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Flows, Lists and Tags</h2>
+        <div class="channel-map">
+            <h3>Channel map</h3>
+            <div class="flow-row"><span class="flow-label">Discover</span><span class="flow-arrow">&rarr;</span><span class="flow-detail">Search and social bring first visits</span></div>
+            <div class="flow-row"><span class="flow-label">Convert</span><span class="flow-arrow">&rarr;</span><span class="flow-detail">Product pages and checkout</span></div>
+            <div class="flow-row"><span class="flow-label">Retain</span><span class="flow-arrow">&rarr;</span><span class="flow-detail">Email and loyalty offers</span></div>
+        </div>
+        <ul class="check-list">
+            <li>Check list item. <code>ul.check-list</code></li>
+            <li>Good for next steps and deliverable lists.</li>
+        </ul>
+        <div class="tag-list"><span class="tag">tag-list</span><span class="tag">tag</span><span class="tag">keywords</span></div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Tables</h2>
+        <table class="kpi-table">
+            <thead><tr><th>Metric</th><th>This Month</th><th>Last Month</th></tr></thead>
+            <tbody>
+                <tr><td>Sessions</td><td>12,400</td><td>11,480</td></tr>
+                <tr><td>Orders</td><td>397</td><td>352</td></tr>
+            </tbody>
+        </table>
+        <p class="section-text">Plain <code>table</code> inside <code>.container</code>; add <code>.kpi-table</code> to bold the first column. Tables scroll sideways on phones.</p>
+    </div>
+
+    <div class="doc-footer">
+        <p>Agency Deliverable Engine component gallery, version 1.0.0.</p>
+    </div>
+</div>
+
+</body>
+</html>
